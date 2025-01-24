@@ -1,0 +1,118 @@
+
+/* Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ff3700;
+}
+
+body {
+    background-color: #000000;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Not conflicting with regula flow of the document */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.875rem 6.25rem;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.nav {
+    display: flex;
+}
+
+/* For the nav on top */
+.nav li {
+    list-style: none;
+    margin: 0 0.62rem;
+}
+
+.nav li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.nav li:hover a {
+    color: var(--primary);
+}
+
+/* Search bar */
+
+.search {
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.search input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    padding: 0 10px 0 45px;
+    backdrop-filter: blur(10px);
+}
+
+.search input::placeholder {
+    color: white;
+}
+
+/* search sign relative to the search container */
+
+.search i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    color: white; /* for border right to look better (box-sizing:border-box) */
+    padding-right: 10px; 
+    border-right: 1px solid white;
+}
+
+/* ------------------------- Banner Content ------------------------- */
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 6.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(./images/movies/bg-thanksgiving.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
