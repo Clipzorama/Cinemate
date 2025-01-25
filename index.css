@@ -141,6 +141,10 @@ header {
 
 /* Content */
 
+.title-movie {
+    max-width: 250px;
+}
+
 .content {
     max-width: 550px;
     position: relative;
@@ -155,10 +159,6 @@ header {
     visibility: visible;
     transform: scale(1);
     transition: 0.5s;
-}
-
-.title-movie {
-    max-width: 250px;
 }
 
 .banner .content h4 {
@@ -307,4 +307,131 @@ header {
 
 .sci a:hover {
     color: var(--primary);
+}
+
+
+/* phones and tablets */
+@media screen and (max-width:600px) {
+    /* header */
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .search {
+        width: 70%;
+        margin-top: 10px;
+        left: 50px;
+        transform: translateX(-30%);
+    }
+
+    .search input {
+        width: 60%;
+    }
+
+    .search i {
+        top: 58%;
+    }
+
+    /* banner & content */
+
+    .banner {
+        padding: 2rem 1rem;
+        flex-direction: column;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .banner .content {
+        max-width: 100%;
+        margin-top: 11rem; /* so it doesnt overlap with the header */
+    }
+
+    .banner .content h4 {
+        font-size: 1.5rem;
+    }
+
+    .banner .content p {
+        font-size: 0.9rem;
+    }
+
+    .banner .button a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    /* carousel container */
+
+    .carousel-box {
+        width: 90%;
+        margin: 0;
+        margin: 2rem 0 5rem 0;
+      }
+    
+      .carousel {
+        width: 100%;
+        height: 400px;
+      }
+    
+      .carousel .carousel-item {
+        width: 250px;
+      }
+
+    .carousel .carousel-item img {
+        transform: translateX(1px) translateY(-70px);
+        width: 100%;
+    }
+
+    /* Bottom links */
+
+    .play {
+        font-size: 1rem;
+        left: 2rem;
+        bottom: 40px;
+    }
+
+    .play i {
+        font-size: 2rem;
+    }
+
+
+    .sci {
+        margin-top: 20px;
+        bottom: 45px;
+        right: 2rem;
+      }
+    
+      .sci a {
+        font-size: 1rem;
+      }
+
+
+}
+
+
+/* Laptops */
+@media screen and (min-width: 1300px) and (max-width: 1450px) {
+    .carousel-box {
+        margin-left: 2rem;
+    }
+
+    .carousel {
+        width: 100%;
+        height: 400px;
+    }
+
+    .carousel .carousel-item img {
+        transform: translateX(1px) translateY(-70px);
+        width: 100%;
+    }
+
 }
